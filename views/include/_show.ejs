@@ -1,0 +1,14 @@
+<% for(var i = 0; i < book.length; i++) { %>
+    <tr>
+        <td><%= book[i].name %></td>
+        <td><%= book[i].author %></td>
+        <td>
+            <a href="/update-user?id=<%= book[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= book[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
